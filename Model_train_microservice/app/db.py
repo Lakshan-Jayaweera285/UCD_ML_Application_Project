@@ -22,7 +22,7 @@ def add_metric(accuracy: float, f1_score: float, precision: float, recall: float
     }
     collection.insert_one(metric)
 
-#fetch metrics from MongoDB
+#fetch evaluated metrics from MongoDB
 def get_metrics(n: int = None):
     query = {}
     sort_order = [("timestamp", -1)]  
